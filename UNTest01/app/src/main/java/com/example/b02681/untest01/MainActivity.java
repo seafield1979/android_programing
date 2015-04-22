@@ -4,16 +4,37 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private final int WC = ViewGroup.LayoutParams.MATCH_PARENT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
+
+    // 画像を変更する
+    public void clickImageButton(View view){
+        // 画像を設定する
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.image2);
+        setContentView(image, new ViewGroup.LayoutParams(WC, WC));
+    }
+
+    // テキストを変更する
+    public void clickButton1(View view) {
+        TextView tv = (TextView) findViewById(R.id.textView1);
+        tv.setText("hellooooo");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
