@@ -1,4 +1,4 @@
-package com.example.b02681.myapplication;
+package com.example.b02681.untest01;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
