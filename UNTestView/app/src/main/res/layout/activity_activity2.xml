@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.b02681.untestview.Activity2">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="78dp"
+        android:id="@+id/relativeLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="top left"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="top center"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="top right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="left"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/btnCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="center"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="right"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bottom left"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bottom center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bottom right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/buttonNext"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

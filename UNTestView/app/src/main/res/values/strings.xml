@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UNTestView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity2">Activity2</string>
+    <string name="title_activity_activity3">Activity3</string>
+    <string name="title_activity_activity1">Activity1</string>
+
+    <string name="layout_title">配列</string>
+    <string name="row_1">均等に配列</string>
+    <string name="row_2">片方を引き延ばして表示</string>
+    <string name="row_3">真ん中で２等分</string>
+</resources>
