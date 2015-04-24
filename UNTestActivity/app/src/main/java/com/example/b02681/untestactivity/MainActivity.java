@@ -10,9 +10,14 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity
+    implements View.OnClickListener
+{
+    Button addButton;
+    int requestCode = 1;
 
     @Override
     protected void onStart() {
@@ -25,6 +30,14 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // ボタンをクリックしたときのイベントを設定
+        addButton = (Button)findViewById(R.id.button3);
+        addButton.setOnClickListener(this);
+
+        Button addActivityButton2 = (Button)findViewById(R.id.button4);
+        addActivityButton2.setOnClickListener(this);
+
         // Log の出力
         Log.d( "MainActivity", "onCreate" );
     }
@@ -80,6 +93,21 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.button3:
+                startActivityForResult(
+                        new Intent(this,MainActivity2Activity.class),
+                        requestCode);
+                break;
+            case R.id.button4:
+                startActivityForResult(
+                        new Intent(this,MainActivity3Activity.class),
+                        requestCode);
+                break;
+        }
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event){
@@ -106,7 +134,7 @@ public class MainActivity extends ActionBarActivity {
 
             return true;
         }
-        return false;
+        return true;
     }
 
     /*
