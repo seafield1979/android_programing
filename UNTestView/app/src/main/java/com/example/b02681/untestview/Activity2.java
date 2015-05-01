@@ -1,9 +1,11 @@
 package com.example.b02681.untestview;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Activity2 extends ActionBarActivity {
@@ -14,6 +16,12 @@ public class Activity2 extends ActionBarActivity {
         setContentView(R.layout.activity_activity2);
     }
 
+    public void clickNextButton(View v){
+        // Activity2を起動
+        startActivityForResult(
+                new Intent(this,Activity3.class),
+                1);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
