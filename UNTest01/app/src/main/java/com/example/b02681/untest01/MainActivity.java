@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -34,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
     public void clickButton1(View view) {
         TextView tv = (TextView) findViewById(R.id.textView1);
         tv.setText("hellooooo");
+        Log.v("UNTest01", "helloooo");
     }
 
     @Override
@@ -55,11 +57,10 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_settings:
                 return true;
             case R.id.action_menu1:
-                Toast ts = Toast.makeText(this, "マイメニューが選択されました", Toast.LENGTH_LONG);
+                Toast ts = Toast.makeText(this, "マイメニュー1が選択されました", Toast.LENGTH_LONG);
                 ts.show();
                 return true;
             case R.id.action_menu2:
-
                 return true;
         }
 

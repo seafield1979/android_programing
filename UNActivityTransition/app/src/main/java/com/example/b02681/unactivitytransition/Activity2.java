@@ -6,7 +6,9 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.content.Intent;
+import android.util.Log;
+import android.app.Activity;
 
 public class Activity2 extends ActionBarActivity {
 
@@ -14,10 +16,26 @@ public class Activity2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity2);
+
+        // 起動元のActivityからの引数を取得する
+        Intent intent = this.getIntent();
+        String name = intent.getStringExtra("name");
+        Log.d("MyApp", "name:" + name);
     }
 
+    // 戻るボタンを押した
     public void clickGoBackButton(View v){
-        dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
+        // intentの作成
+        Intent intent = new Intent();
+
+        // intentへ添え字付で値を保持させる
+        intent.putExtra( "key2", "result_val" );
+
+        // 返却したい結果ステータスをセットする
+        setResult( Activity.RESULT_OK, intent );
+
+        // アクティビティを終了させる
+        finish();
     }
 
     @Override
@@ -26,6 +44,7 @@ public class Activity2 extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_activity2, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
